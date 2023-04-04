@@ -1,0 +1,119 @@
+#include <stdio.h>
+int main ()
+{
+	int n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, ver1, ver2, r1, r2, r3, r4, r5, r6, r7, r8, r9, a, m;
+	int re1, re2, re3, re4, re5, re6, re7, re8, re9, re10, a2, m2;
+	
+	printf("Verificador de CPF \n\n");
+	printf("Digite os numeros do seu cpf \n");
+	
+	printf("1- ");
+	scanf("%d",&n1);
+	
+	
+	printf("2- ");
+	scanf("%d",&n2);
+	
+	
+	printf("3- ");
+	scanf("%d",&n3);
+	
+	
+	printf("4- ");
+	scanf("%d",&n4);
+	
+	
+	printf("5  ");
+	scanf("%d",&n5);	
+
+	
+	printf("6- ");
+	scanf("%d",&n6);
+	
+		
+	printf("7- ");
+	scanf("%d",&n7);
+	
+		
+	printf("8- ");
+	scanf("%d",&n8);
+	
+			
+	printf("9- ");
+	scanf("%d",&n9);
+	
+		
+	printf("10- ");
+	scanf("%d",&n10);
+	
+	
+	printf("11- ");
+	scanf("%d",&n11);
+	
+	
+//Calculo primeiro digito:
+
+	r1 = n1*10;
+	r2 = n2*9;
+	r3 = n3*8;
+	r4 = n4*7;
+	r5 = n5*6;	
+	r6 = n6*5;
+	r7 = n7*4;
+	r8 = n8*3;
+	r9 = n9*2;
+	
+	a = r1+r2+r3+r4+r5+r6+r7+r8+r9;
+	m = a%11;
+	
+
+	if (m<2){
+		
+		ver1 = 0;
+		
+	}
+	else {
+		
+		ver1 = 11-m;
+	}
+	
+	
+//calculo segundo digito:
+	
+	re1 = n1*11;
+	re2 = n2*10;
+	re3 = n3*9;
+	re4 = n4*8;
+	re5 = n5*7;	
+	re6 = n6*6;
+	re7 = n7*5;
+	re8 = n8*4;
+	re9 = n9*3;
+	re10 = n10*2;
+	
+	a2 = re1+re2+re3+re4+re5+re6+re7+re8+re9+re10;
+	m2 = a2%11;	
+	
+	if(m2<2){
+		
+		ver2 = 0;
+	}
+	else{
+		
+		ver2 = 11-m2;
+	}
+	
+//Verificação...
+	if(ver1==n10 && ver2==n11){
+		 
+		 printf("\n\n\nSeu CPF e valido!!! ");
+	}
+	else{
+		printf("\n\n\nSeu CPF e invalido!!! ");
+	}
+	
+	
+	return(0);				
+}
+	
+	
